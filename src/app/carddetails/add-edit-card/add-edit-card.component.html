@@ -1,0 +1,36 @@
+<div class="modal-body ">
+  <div>
+    <label for="CardType">Select Card type<span class="text-danger">*</span></label>
+    <select id="cardtype" [(ngModel)]="CardType" appautofocus="" class="form-control ng-pristine ng-valid ng-touched">
+      <option value="MasterCard" class="ng-star-inserted">MasterCard</option>
+      <option value="Visa" class="ng-star-inserted">Visa</option>
+      <option value="Maestro" class="ng-star-inserted">Maestro</option>
+      <option value="Other" class="ng-star-inserted">Other</option>
+      <!---->
+    </select>
+      </div>
+
+  <div class="mb-3">
+    <label for="CardNumber">CardNumber<span class="text-danger">*</span></label>
+    <input type="password" [(ngModel)]="CardNumber" class="form-control" id="Username" placeholder="Enter Card Number">
+</div>
+
+
+  <div class="mb-3">
+    <label for="Name">Card holder Name<span class="text-danger">*</span></label>
+    <input type="text" [(ngModel)]="CardHolderName" class="form-control" id="Name" placeholder="">
+</div>
+
+<div class="mb-3">
+  <label for="Cvv">CVV<span class="text-danger">*</span></label>
+  <input type="password" [(ngModel)]="Cvv" class="form-control" id="Cvv" placeholder="">
+</div>
+
+<div class="modal-footer pt-4">
+  <button type="button" class="btn btn-success mx-auto w-100" (click)="addCard()"
+  *ngIf="car.Id==0">Save</button>
+  <button class="btn btn-success mx-auto w-100" (click)="updateCard()"
+  *ngIf="car.Id!=0" >Update</button>
+</div>
+
+</div>
